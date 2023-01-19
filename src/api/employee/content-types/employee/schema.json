@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employees",
+  "info": {
+    "singularName": "employee",
+    "pluralName": "employees",
+    "displayName": "Questions",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Question": {
+      "type": "text",
+      "required": true
+    },
+    "Option1": {
+      "type": "text",
+      "required": true
+    },
+    "Option2": {
+      "type": "text",
+      "required": true
+    },
+    "Option3": {
+      "type": "text",
+      "required": true
+    },
+    "Option4": {
+      "type": "text",
+      "required": true
+    },
+    "CorrectAns": {
+      "type": "text",
+      "required": true
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "Questions"
+    }
+  }
+}

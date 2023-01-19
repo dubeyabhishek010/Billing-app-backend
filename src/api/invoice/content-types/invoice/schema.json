@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invoices",
+  "info": {
+    "singularName": "invoice",
+    "pluralName": "invoices",
+    "displayName": "Invoice",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Products": {
+      "type": "json",
+      "required": true
+    },
+    "Customer_Address": {
+      "type": "json",
+      "required": true
+    },
+    "Invoice_id": {
+      "type": "uid",
+      "required": true,
+      "default": "Comp"
+    },
+    "Customer_name": {
+      "type": "string",
+      "required": true
+    },
+    "Contact_number": {
+      "type": "biginteger",
+      "required": true,
+      "unique": true
+    }
+  }
+}
